@@ -9,7 +9,7 @@ import Signup from './Pages/Signup/Signup';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App mx-16">
       <Navbar></Navbar>
       <Routes>
         <Route path='/' element={<Home/>} ></Route>
