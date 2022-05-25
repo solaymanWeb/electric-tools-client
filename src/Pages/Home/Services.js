@@ -9,14 +9,14 @@ const Services = () => {
         .then(data => setServices(data))
     },[])
     return (
-        <section className=' mt-72'>
+        <section className=' md:mt-48 lg:mt-72'>
             {/* DIVIDER */}
             <div class="flex flex-col w-full border-opacity-50">
                  <div class="divider text-green-500 font-bold text-3xl">Inventory</div>
              </div>
 
              {/* SERVICES  */}
-        <div className='grid grid-cols-1 lg:grid-cols-3 gap-5 '>  
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 '>  
        {
            services.map(service=>        
               <div class="card  bg-base-100 shadow-xl">
