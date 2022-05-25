@@ -23,7 +23,7 @@ const Services = () => {
             <figure className='p-10 w-4/5 h-4/5'>
             <img w-full src={service.picture} alt="Shoes" />
             </figure>
-           <div class="card-body text-left ">
+           <div class="card-body text-left text-sm ">
                <ul>
                    <li><span className='font-bold'>Name:</span> {service.name}</li>
                    <li><span className='font-bold'>Description</span> {service.discription}</li>
@@ -31,11 +31,6 @@ const Services = () => {
                    <li><span className='font-bold'>Minimum order:</span> {service.minimumOrder}</li>
                    <li><span className='font-bold'>Per unit Price: $</span>{service.price}</li>
                </ul>
-             {/* <h6>Name: </h6>
-             <p>Description: </p>
-             <p>Available: </p>
-             <p>Minimum order: </p>
-             <p>Per unit Price: </p> */}
              <div class="card-actions justify-start">
              <button class="btn btn-primary">purchase</button>
              </div>
