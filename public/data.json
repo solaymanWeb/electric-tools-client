@@ -1,5 +1,6 @@
 [
     {
+      "_id": 1,
       "picture": "https://m.media-amazon.com/images/I/7128jKz7HFS._AC_SX466_.jpg",
       "name": "Klein Tools ET310 ",
       "price": 10,
@@ -8,6 +9,7 @@
       "minimumOrder": 100
     },
     {
+      "_id": 2,
       "picture": "https://m.media-amazon.com/images/I/61rTlPqRcgL._AC_SX466_.jpg",
       "name": "Receptacle Tester with LCD Display",
       "price": 12,
@@ -16,6 +18,7 @@
       "minimumOrder": 100
     },
     {
+      "_id": 3,
       "picture": "https://m.media-amazon.com/images/I/61puh9SSMIL._AC_SX466_.jpg",
       "name": "Klein Digital Multimeter",
       "price": 14,
@@ -24,6 +27,7 @@
       "minimumOrder": 100
     },
     {
+      "_id": 4,
       "picture": "https://m.media-amazon.com/images/I/61GpawbYkfL._AC_SX466_.jpg",
       "name": "Insulated Screwdriver Tool",
       "price": 12,
@@ -32,6 +36,7 @@
       "minimumOrder": 100
     },
     {
+      "_id": 5,
       "picture": "https://m.media-amazon.com/images/I/51QsLYhE9yL._SY500_.jpg",
       "name": "Stranded Wire Stripping Tool",
       "price": 10,
@@ -40,6 +45,7 @@
       "minimumOrder": 100
     },
     {
+      "_id":6,
       "picture": "https://m.media-amazon.com/images/I/61GpawbYkfL._AC_SX466_.jpg",
       "name": "Drywall Cutting Tool",
       "price": 15,

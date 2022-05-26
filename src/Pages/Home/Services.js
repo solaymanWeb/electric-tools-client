@@ -1,15 +1,26 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 
 
 const Services = () => {
     const [services, setServices]=useState([])
+    const navigate = useNavigate();
     useEffect(()=>{
         fetch('data.json')
         .then(res =>res.json())
         .then(data => setServices(data))
     },[])
+
+    const handlePurchase =(id)=>{
+        console.log(id)
+        if(id){
+            navigate(`/purchase/${id}`)
+        }
+       
+    } 
     return (
-        <section className=' md:mt-48 lg:mt-72'>
+        <section className=' md:mt-8 lg:mt-12'>
             {/* DIVIDER */}
             <div class="flex flex-col w-full border-opacity-50">
                  <div class="divider text-green-500 font-bold text-3xl">Inventory</div>
@@ -32,7 +43,7 @@ const Services = () => {
                    <li><span className='font-bold'>Per unit Price: $</span>{service.price}</li>
                </ul>
              <div class="card-actions justify-start">
-             <button class="btn btn-primary">purchase</button>
+             <button onClick={()=>handlePurchase(service._id)} class="btn btn-primary">purchase</button>
              </div>
            </div>
            </div>
