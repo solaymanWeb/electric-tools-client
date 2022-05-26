@@ -14,7 +14,7 @@ const Navbar = () => {
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/dashboard'>Dashboard</Link></li>
         <li><Link to='/blog'>Blog</Link></li>
-        <li><Link to='/portfolio'>Blog</Link></li>
+        <li><Link to='/portfolio'>portfolio</Link></li>
         <li>{user? <button onClick={logout} class="btn btn-ghost">Log out</button> :<Link to='/login'>Login</Link>}</li>
         <li><Link to='/signup'>Sign up</Link></li>
     </>
