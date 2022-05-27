@@ -7,10 +7,11 @@ const Services = () => {
     const [services, setServices]=useState([])
     const navigate = useNavigate();
     useEffect(()=>{
-        fetch('data.json')
+        fetch('http://localhost:5000/tools')
         .then(res =>res.json())
         .then(data => setServices(data))
     },[])
+
 
     const handlePurchase =(id)=>{
         console.log(id)
