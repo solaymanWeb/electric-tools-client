@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { toast } from 'react-toastify';
 
 const MyReview = () => {
 
@@ -17,9 +18,8 @@ const MyReview = () => {
         .then(res => res.json())
         .then(data =>{
             if(data){
-                alert('data send success')
+                toast.success("successfully!! review added")
             }
-            console.log(data)
         })
 
     };

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 
 
@@ -9,29 +10,41 @@ const Purchase = () => {
     const [user, loading, error] = useAuthState(auth);
     const {id} = useParams();
     const [tools, setTools]=useState([])
-    // React hook form---->
-    const { register, handleSubmit } = useForm();
-    const onSubmit = data => {
-        console.log(data)
-    };
+    const { register, reset,  handleSubmit } = useForm();
 
+    // React hook form---->
     useEffect(()=>{
         fetch(`http://localhost:5000/tools/${id}`)
         .then(res => res.json())
         .then(data => setTools(data))
         
     },[])
+   
+    const onSubmit = data => {
+        const url =`http://localhost:5000/purchase`
+        fetch(url,{
+            method: 'POST',
+            headers:{
+                'content-type':'application/json'
+            },
+            body:JSON.stringify(data)
+        })
+        .then(res => res.json())
+        .then(data => {
+            if(data){
+                toast.success('Order succesfully')
+            }         
+        })
+     reset()
+    };
+
+// handle quantity
+  
+   
+  
     if(loading){
         return <button className='btn btn-loading'>Loading...</button>
     }
-
-    // handle quantity
-    const handelChange=event=>{
-       
-        console.log(event.target.value)
-        console.log('hello')
-    }
-   
 
     return (
         <section className='mt-8 grid grid-cols-2 gap-5 '> 
@@ -100,7 +113,7 @@ const Purchase = () => {
                <span class="label-text">Product Quantity</span>
            </label>
 
-           <input type="number" onChange={handelChange}
+           <input type="number" 
            placeholder="Your product quantity" name='quantity'
            class="input input-bordered w-full h-8"  {...register("quantity")}
            />

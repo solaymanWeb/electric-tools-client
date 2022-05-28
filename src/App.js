@@ -14,6 +14,8 @@ import Purchase from './Pages/Purchase/Purchase';
 import RequireAuth from './Pages/RequireAuth/RequireAuth';
 import Navbar from './Pages/Shared/Navbar';
 import Signup from './Pages/Signup/Signup';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
@@ -40,6 +42,7 @@ function App() {
         <Route path='signup' element={<Signup/>}></Route>
         <Route path='*' element={<NotFound/>}></Route>
       </Routes>
+      <ToastContainer />
       
     </div>
   );

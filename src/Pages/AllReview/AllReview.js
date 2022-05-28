@@ -11,7 +11,7 @@ useEffect(()=>{
     return (
         <div>
         <section className='bg-gray-50 '>
-         <h4 class="text-green-500  font-bold text-2xl">Buyer <span className='text-orange-500'>Review</span></h4>
+         <h4 class="text-green-500  font-bold text-2xl">Buyer all <span className='text-orange-500'>Review</span></h4>
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-5 text-left py-8'>
             {
                 reviews.map(review => <>
