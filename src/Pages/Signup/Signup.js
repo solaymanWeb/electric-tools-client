@@ -34,18 +34,18 @@ const Signup = () => {
     };
     return (
         <div className='flex justify-center'>
-        <div class="card w-96 bg-base-100 shadow-xl">
-       <div class="card-body">
-            <h2 class=" text-center text-2xl font-bold">Register</h2>
+        <div className="card w-96 bg-base-100 shadow-xl">
+       <div className="card-body">
+            <h2 className=" text-center text-2xl font-bold">Register</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
 
-            <div class="form-control w-full max-w-xs">
-           <label class="label">
-               <span class="label-text">Full name</span>
+            <div className="form-control w-full max-w-xs">
+           <label className="label">
+               <span className="label-text">Full name</span>
            </label>
            <input type="text" 
            placeholder="Your full name" 
-           class="input input-bordered w-full max-w-xs" 
+           className="input input-bordered w-full max-w-xs" 
            {...register("name", { 
                required: {
                    value: true,
@@ -53,18 +53,18 @@ const Signup = () => {
                }
             })}
            />
-           <label class="label">
-           {errors.name?.type === 'required' && <span class="label-text-alt text-red-500">{errors.name.message}</span>}  
+           <label className="label">
+           {errors.name?.type === 'required' && <span className="label-text-alt text-red-500">{errors.name.message}</span>}  
            </label>
            </div>
 
-            <div class="form-control w-full max-w-xs">
-           <label class="label">
-               <span class="label-text">Email</span>
+            <div className="form-control w-full max-w-xs">
+           <label className="label">
+               <span className="label-text">Email</span>
            </label>
            <input type="email" 
            placeholder="Your email" 
-           class="input input-bordered w-full max-w-xs" 
+           className="input input-bordered w-full max-w-xs" 
            {...register("email", { 
                required: {
                    value: true,
@@ -72,18 +72,18 @@ const Signup = () => {
                }
             })}
            />
-           <label class="label">
-           {errors.email?.type === 'required' && <span class="label-text-alt text-red-500">{errors.email.message}</span>}  
+           <label className="label">
+           {errors.email?.type === 'required' && <span className="label-text-alt text-red-500">{errors.email.message}</span>}  
            </label>
            </div>
 
-            <div class="form-control w-full max-w-xs">
-           <label class="label">
-               <span class="label-text">Password</span>
+            <div className="form-control w-full max-w-xs">
+           <label className="label">
+               <span className="label-text">Password</span>
            </label>
            <input type="Password" 
            placeholder="Your password" 
-           class="input input-bordered w-full max-w-xs" 
+           className="input input-bordered w-full max-w-xs" 
            {...register("password", { 
                required: {
                    value: true,
@@ -96,18 +96,18 @@ const Signup = () => {
                }
             })}
            />
-           <label class="label">
-           {errors.password?.type === 'required' && <span class="label-text-alt text-red-500">{errors.password.message}</span>}  
+           <label className="label">
+           {errors.password?.type === 'required' && <span className="label-text-alt text-red-500">{errors.password.message}</span>}  
 
-           {errors.password?.type === 'minLength' && <span class="label-text-alt text-red-500">{errors.password.message}</span>}  
+           {errors.password?.type === 'minLength' && <span className="label-text-alt text-red-500">{errors.password.message}</span>}  
            </label>
            {createError}
            </div>
 
-           <button type='submit' class="btn w-full max-w-xs"> Resister </button>
+           <button type='submit' className="btn w-full max-w-xs"> Resister </button>
             </form>   
                    
-            <div class="divider">OR</div>
+            <div className="divider">OR</div>
             <div>
                 <p>Alredy have an account? <Link  className='text-green-500' to='/login'>Please login</Link> </p>
             </div>

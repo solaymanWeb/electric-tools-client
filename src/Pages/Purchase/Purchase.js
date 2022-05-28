@@ -10,7 +10,7 @@ const Purchase = () => {
     const [user, loading, error] = useAuthState(auth);
     const {id} = useParams();
     const [tools, setTools]=useState([])
-    const { register, reset,  handleSubmit } = useForm();
+    const { register, reset, watch,  handleSubmit } = useForm();
 
     // React hook form---->
     useEffect(()=>{
@@ -19,6 +19,10 @@ const Purchase = () => {
         .then(data => setTools(data))
         
     },[])
+
+    console.log(tools)
+    const quantity = watch('quantity')
+    console.log(quantity)
    
     const onSubmit = data => {
         const url =`http://localhost:5000/purchase`
@@ -48,11 +52,11 @@ const Purchase = () => {
 
     return (
         <section className='mt-8 grid grid-cols-2 gap-5 '> 
-            <div class="  bg-gray-100 shadow-xl">
-            <figure class="px-3 pt-5 w-72 mx-auto">
-                <img src={tools.picture} alt="card" class="rounded-xl" />
+            <div className="  bg-gray-100 shadow-xl">
+            <figure className="px-3 pt-5 w-72 mx-auto">
+                <img src={tools.picture} alt="card" className="rounded-xl" />
             </figure>
-            <div class="card-body text-left text-sm ">
+            <div className="card-body text-left text-sm ">
                <ul>
                    <li><span className='font-bold'>Name:</span> {tools.name}</li>
                    <li><span className='font-bold'>Description</span> {tools.discription}</li>
@@ -65,62 +69,73 @@ const Purchase = () => {
 
             {/* Delivery Information */}
 
-            <div class="  mx-auto w-full bg-gray-100 shadow-xl">
-            <div class="card-body  ">
-            <h2 class=" text-center text-2xl font-bold">Purchase information</h2>
+            <div className="  mx-auto w-full bg-gray-100 shadow-xl">
+            <div className="card-body  ">
+            <h2 className=" text-center text-2xl font-bold">Purchase information</h2>
 
             <form onSubmit={handleSubmit(onSubmit)}>
-            <div class="form-control w-full mx-auto   max-w-xs">
-           <label class="label">
-               <span class="label-text">Full name</span>
+            <div className="form-control w-full mx-auto   max-w-xs">
+           <label className="label">
+               <span className="label-text">Full name</span>
            </label>
            <input type="text"
            value={user?.displayName || ''}
            placeholder="Your full name" 
-           class="input input-bordered w-full h-8"  {...register("name")}
+           className="input input-bordered w-full h-8"  {...register("name")}
            />
            </div>
-            <div class="form-control w-full mx-auto  max-w-xs">
-           <label class="label">
-               <span class="label-text">Phone number</span>
+            <div className="form-control w-full mx-auto  max-w-xs">
+           <label className="label">
+               <span className="label-text">Phone number</span>
            </label>
            <input type="number"
            placeholder="Your phone number" 
-           class="input input-bordered w-full h-8"  {...register("phone")}
+           className="input input-bordered w-full h-8"  {...register("phone")}
            />
            </div>
-            <div class="form-control w-full mx-auto  max-w-xs">
-           <label class="label">
-               <span class="label-text">Email</span>
+            <div className="form-control w-full mx-auto  max-w-xs">
+           <label className="label">
+               <span className="label-text">Email</span>
            </label>
            <input type="email"
            value={user?.email || ''}
            placeholder="Your full email" 
-           class="input input-bordered w-full h-8"  {...register("email")}
+           className="input input-bordered w-full h-8"  {...register("email")}
            />
            </div>
-            <div class="form-control w-full mx-auto  max-w-xs">
-           <label class="label">
-               <span class="label-text">Full Address</span>
+            <div className="form-control w-full mx-auto  max-w-xs">
+           <label className="label">
+               <span className="label-text">Full Address</span>
            </label>
 
            <textarea type="text"  name="" id="" cols="10"  rows="3" className='textarea-bordered'
            {...register("address")}
            ></textarea>
            </div>
-            <div class="form-control w-full  mx-auto max-w-xs">
-           <label class="label">
-               <span class="label-text">Product Quantity</span>
+            <div className="form-control w-full  mx-auto max-w-xs">
+           <label className="label">
+               <span className="label-text">Product Name</span>
+           </label>
+
+           <input type="text" 
+           value ={tools?.name}
+           placeholder="Your product name" name=''
+           className="input input-bordered w-full h-8"  {...register("productName")}
+           />
+
+           </div>
+            <div className="form-control w-full  mx-auto max-w-xs">
+           <label className="label">
+               <span className="label-text">Product Quantity</span>
            </label>
 
            <input type="number" 
            placeholder="Your product quantity" name='quantity'
-           class="input input-bordered w-full h-8"  {...register("quantity")}
+           className="input input-bordered w-full h-8"  {...register("quantity")}
            />
-
            </div>
 
-           <button type='submit' class="btn w-full mt-5 max-w-xs"> buy now </button>
+           <button type='submit' className="btn w-full mt-5 max-w-xs"> buy now </button>
             </form>   
            </div>
             </div>
