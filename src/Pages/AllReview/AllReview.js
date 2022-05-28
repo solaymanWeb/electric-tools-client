@@ -1,16 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
 
-const Review = () => {
-const [reviews, setReviews]=useState([]);
+const AllReview = () => {
+
+    const [reviews, setReviews]=useState([]);
 useEffect(()=>{
-    fetch('http://localhost:5000/review')
+    fetch('http://localhost:5000/allreview')
     .then(res => res.json())
     .then(data => setReviews(data))
 },[])
     return (
+        <div>
         <section className='bg-gray-50 '>
-             <h4 class="text-green-500  font-bold text-2xl">Buyer <span className='text-orange-500'>Review</span></h4>
+         <h4 class="text-green-500  font-bold text-2xl">Buyer <span className='text-orange-500'>Review</span></h4>
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-5 text-left py-8'>
             {
                 reviews.map(review => <>
@@ -21,14 +22,11 @@ useEffect(()=>{
                     <p>Review: {review.review}</p>
                 </div>
                 </div>
-                </>)
-            }    
+                </>)}    
         </div>
-        <div className=' flex justify-end pt-5'>
-        <Link to='/allreview'><button class="btn  btn-primary ">See more review</button></Link>
-         </div>
         </section>
+        </div>
     );
 };
 
-export default Review;
+export default AllReview;
