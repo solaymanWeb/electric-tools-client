@@ -31,6 +31,7 @@ const Signup = () => {
         await updateProfile({ displayName: data.name });
         navigate('/')
         
+        
     };
     return (
         <div className='flex justify-center'>
