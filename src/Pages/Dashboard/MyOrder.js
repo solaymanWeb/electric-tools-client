@@ -9,7 +9,7 @@ const MyOrder = () => {
     const [orders, setOrders]= useState([]);
     useEffect(()=>{
         if(user){
-            fetch(`http://localhost:5000/purchase?email=${user.email}`)
+            fetch(`https://gentle-hamlet-86123.herokuapp.com/purchase?email=${user.email}`)
             .then(res => res.json())
             .then(data => setOrders(data))
         }
@@ -18,7 +18,7 @@ const MyOrder = () => {
     const orderCancle=(id)=>{
         const proced = window.confirm('are you sure cancle order')
         if(proced){
-            const url = `http://localhost:5000/purchase/${id}`
+            const url = `https://gentle-hamlet-86123.herokuapp.com/purchase/${id}`
             fetch(url,{
                 method: "DELETE",
             })

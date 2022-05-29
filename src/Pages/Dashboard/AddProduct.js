@@ -8,7 +8,7 @@ const AddProduct = () => {
     const { register, reset, handleSubmit } = useForm();
     const [user, loading, error] = useAuthState(auth);
     const onSubmit = data => {
-        const url = `http://localhost:5000/tools`
+        const url = `https://gentle-hamlet-86123.herokuapp.com/tools`
         fetch(url, {
             method: 'POST',
             headers: {

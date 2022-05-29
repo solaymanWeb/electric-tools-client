@@ -7,7 +7,7 @@ const Services = () => {
     const [services, setServices]=useState([])
     const navigate = useNavigate();
     useEffect(()=>{
-        fetch('http://localhost:5000/tools')
+        fetch('https://gentle-hamlet-86123.herokuapp.com/tools')
         .then(res =>res.json())
         .then(data => setServices(data))
     },[])

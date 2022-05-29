@@ -14,7 +14,7 @@ const Purchase = () => {
 
     // React hook form---->
     useEffect(() => {
-        fetch(`http://localhost:5000/tools/${id}`)
+        fetch(`https://gentle-hamlet-86123.herokuapp.com/tools/${id}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data)
@@ -28,7 +28,7 @@ const Purchase = () => {
     console.log(quantity)
 
     const onSubmit = data => {
-        const url = `http://localhost:5000/purchase`
+        const url = `https://gentle-hamlet-86123.herokuapp.com/purchase`
         fetch(url, {
             method: 'POST',
             headers: {

@@ -7,7 +7,6 @@ import Offer from './Offer';
 import Review from './Review';
 import Services from './Services';
 
-
 const Home = () => {
     
     return (
@@ -24,3 +23,4 @@ const Home = () => {
 };
 
 export default Home;
+

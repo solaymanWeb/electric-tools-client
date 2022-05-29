@@ -9,7 +9,7 @@ const ManageProducts = () => {
     const [services, setServices] = useState([])
     const navigate = useNavigate();
     useEffect(() => {
-        fetch('http://localhost:5000/alltools')
+        fetch('https://gentle-hamlet-86123.herokuapp.com/alltools')
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])
@@ -18,7 +18,7 @@ const ManageProducts = () => {
     const handleDelete = (id) => {
         const proced = window.confirm('are you sure DELETE')
         if (proced) {
-            const url = `http://localhost:5000/alltools/${id}`
+            const url = `https://gentle-hamlet-86123.herokuapp.com/alltools/${id}`
             fetch(url, {
                 method: "DELETE",
             })

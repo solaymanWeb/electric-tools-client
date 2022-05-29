@@ -7,7 +7,7 @@ const MyReview = () => {
 
     const { register, watch, reset, handleSubmit } = useForm();
     const onSubmit = data => {
-        const url =`http://localhost:5000/review`
+        const url =`https://gentle-hamlet-86123.herokuapp.com/review`
         fetch(url,{
             method: 'POST',
             headers:{
