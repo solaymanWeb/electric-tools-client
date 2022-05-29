@@ -24,7 +24,7 @@ import ManageProducts from './Pages/Dashboard/ManageProducts';
 
 function App() {
   return (
-    <div className="App mx-16">
+    <div className="App mx-16" >
       <Navbar></Navbar>
       <Routes>
         <Route path='' element={<Home/>} ></Route>

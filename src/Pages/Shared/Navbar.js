@@ -11,16 +11,15 @@ const Navbar = () => {
     signOut(auth);
   };
     const menuItem= <>
-        <li className=''><Link to='/'>Home</Link></li>
-        <li className=''><Link to='/dashboard'>Dashboard</Link></li>
-        <li className=''><Link to='/blog'>Blog</Link></li>
-        <li className=''><Link to='/portfolio'>portfolio</Link></li>
-        <li className=''>{user? <button onClick={logout} className="btn btn-ghost text-xs">Log out</button> :<Link to='/login'>Login</Link>}</li>
-        <li className=''><Link to='/signup'>Sign up</Link></li>
+        <li ><Link to='/'>Home</Link></li>
+        <li ><Link to='/dashboard'>Dashboard</Link></li>
+        <li ><Link to='/blog'>Blog</Link></li>
+        <li ><Link to='/portfolio'>portfolio</Link></li>
+        <li >{user? <button onClick={logout} className="btn btn-ghost text-xl">Log out</button> :<Link to='/login'>Login</Link>}</li>
+        <li ><Link to='/signup'>Sign up</Link></li>
     </>
     return (
-<div className="navbar bg-base-100">
-
+<div className="navbar bg-base-100 text-xl">
 <div className="navbar-start">
     <div className="dropdown">
       <label tabindex="0" className="btn btn-ghost lg:hidden">

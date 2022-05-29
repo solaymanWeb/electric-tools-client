@@ -53,7 +53,7 @@ const ManageProducts = () => {
                             <figure className='p-10  h-4/5'>
                                 <img w-full src={service.picture} alt="Shoes" />
                             </figure>
-                            <div className="card-body pt-0 text-left text-sm ">
+                            <div className="card-body pt-0 text-left text-xl ">
                                 <ul>
                                     <li><span className='font-bold'>Name:</span> {service.name}</li>
                                     <li><span className='font-bold'>Description</span> {service.discription}</li>

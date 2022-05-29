@@ -11,7 +11,7 @@ import Services from './Services';
 const Home = () => {
     
     return (
-        <div>
+        <div className='text-xl' >
             <Banner></Banner>
             <Services></Services>
             <BusinessSummary></BusinessSummary>

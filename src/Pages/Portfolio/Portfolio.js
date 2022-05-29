@@ -5,7 +5,7 @@ const Portfolio = () => {
     return (
         <div className='my-8'>
             <div className="hero shadow-xl">
-            <div className="hero-content flex-col gap-5 lg:flex-row">
+            <div className="hero-content flex-col gap-5 text-xl lg:flex-row">
                 <img src={myImage} className="lg:max-w-sm md:max-w-sm rounded-lg shadow-2xl" alt='my_image' />
                 <div className='text-left lg:pl-16'>
                 <h1 className="text-2xl text-center py-5 font-bold">About us</h1>

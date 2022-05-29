@@ -53,12 +53,12 @@ const Purchase = () => {
 
 
     return (
-        <section className='mt-8 grid grid-cols-2 gap-5 '>
+        <section className='mt-8 grid grid-cols-2  gap-5 '>
             <div className="  bg-gray-100 shadow-xl">
                 <figure className="px-3 pt-5 w-72 mx-auto">
                     <img src={tools.picture} alt="card" className="rounded-xl" />
                 </figure>
-                <div className="card-body text-left text-sm ">
+                <div className="card-body text-left text-xl ">
                     <ul>
                         <li><span className='font-bold'>Name:</span> {tools.name}</li>
                         <li><span className='font-bold'>Description</span> {tools.discription}</li>
@@ -71,14 +71,14 @@ const Purchase = () => {
 
             {/* Delivery Information */}
 
-            <div className="  mx-auto w-full bg-gray-100 shadow-xl">
-                <div className="card-body  ">
+            <div className="  mx-auto w-full text-xl bg-gray-100 shadow-xl">
+                <div className="card-body text-xl ">
                     <h2 className=" text-center text-2xl font-bold">Purchase information</h2>
 
                     <form onSubmit={handleSubmit(onSubmit)}>
-                        <div className="form-control w-full mx-auto   max-w-xs">
+                        <div className="form-control  w-full mx-auto    max-w-xs">
                             <label className="label">
-                                <span className="label-text">Full name</span>
+                                <span className="label-text text-xl">Full name</span>
                             </label>
                             <input type="text"
                                 value={user?.displayName || ''}
@@ -88,7 +88,7 @@ const Purchase = () => {
                         </div>
                         <div className="form-control w-full mx-auto  max-w-xs">
                             <label className="label">
-                                <span className="label-text">Phone number</span>
+                                <span className="label-text text-xl">Phone number</span>
                             </label>
                             <input type="number"
                                 placeholder="Your phone number"
@@ -97,7 +97,7 @@ const Purchase = () => {
                         </div>
                         <div className="form-control w-full mx-auto  max-w-xs">
                             <label className="label">
-                                <span className="label-text">Email</span>
+                                <span className="label-text text-xl">Email</span>
                             </label>
                             <input type="email"
                                 value={user?.email || ''}
@@ -107,7 +107,7 @@ const Purchase = () => {
                         </div>
                         <div className="form-control w-full mx-auto  max-w-xs">
                             <label className="label">
-                                <span className="label-text">Full Address</span>
+                                <span className="label-text text-xl">Full Address</span>
                             </label>
 
                             <textarea type="text" name="" id="" cols="10" rows="3" className='textarea-bordered'
@@ -116,7 +116,7 @@ const Purchase = () => {
                         </div>
                         <div className="form-control w-full  mx-auto max-w-xs">
                             <label className="label">
-                                <span className="label-text">Product Name</span>
+                                <span className="label-text text-xl">Product Name</span>
                             </label>
 
                             <input type="text"
@@ -129,7 +129,7 @@ const Purchase = () => {
                         </div>
                         <div className="form-control w-full  mx-auto max-w-xs">
                             <label className="label">
-                                <span className="label-text">Product Quantity</span>
+                                <span className="label-text text-xl">Product Quantity</span>
                             </label>
 
                             <input type="number"

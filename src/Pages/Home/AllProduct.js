@@ -27,21 +27,21 @@ const AllProduct = () => {
         return <button className='btn btn-loading'>Loading...</button>
     }
     return (
-        <section className=' md:mt-8 lg:mt-12'>
+        <section className=' md:mt-8 lg:mt-12 text-xl'>
             {/* DIVIDER */}
             <div className="flex flex-col w-full border-opacity-50">
                 <div className="divider text-green-500 font-bold text-3xl">Our all product</div>
             </div>
 
             {/* All product  */}
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 '>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 text-xl '>
                 {
                     services.map(service =>
-                        <div className="card  bg-base-100 shadow-xl">
+                        <div className="card  bg-base-100  shadow-xl">
                             <figure className='p-10  h-4/5'>
                                 <img w-full src={service.picture} alt="Shoes" />
                             </figure>
-                            <div className="card-body pt-0 text-left text-sm ">
+                            <div className="card-body pt-0 text-left text-xl ">
                                 <ul>
                                     <li><span className='font-bold'>Name:</span> {service.name}</li>
                                     <li><span className='font-bold'>Description</span> {service.discription}</li>

@@ -33,13 +33,13 @@ const AddProduct = () => {
         <div>
             <h2 className=" text-center text-2xl pt-3 text-orange-500 font-bold">Add a  Item</h2>
             <div className="  mx-auto w-full bg-gray-100 shadow-xl">
-                <div className="card-body  ">
+                <div className="card-body   ">
                     <h2 className=" text-center text-2xl font-bold">Add a New Item</h2>
 
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="form-control w-full mx-auto   max-w-xs">
-                            <label className="label">
-                                <span className="label-text">Product Name</span>
+                            <label className="label ">
+                                <span className="label-text text-xl">Product Name</span>
                             </label>
                             <input type="text"
                                 placeholder="Type product name"
@@ -48,7 +48,7 @@ const AddProduct = () => {
                         </div>
                         <div className="form-control w-full mx-auto  max-w-xs">
                             <label className="label">
-                                <span className="label-text">Available Product Quantity</span>
+                                <span className="label-text text-xl">Available Product Quantity</span>
                             </label>
                             <input type="number"
                                 placeholder="Type Available Product"
@@ -57,7 +57,7 @@ const AddProduct = () => {
                         </div>
                         <div className="form-control w-full mx-auto  max-w-xs">
                             <label className="label">
-                                <span className="label-text">Minimum Order Quantity</span>
+                                <span className="label-text text-xl">Minimum Order Quantity</span>
                             </label>
                             <input type="number"
                                 placeholder="Type minimum order quantity"
@@ -67,7 +67,7 @@ const AddProduct = () => {
                       
                         <div className="form-control w-full mx-auto  max-w-xs">
                             <label className="label">
-                                <span className="label-text">Description</span>
+                                <span className="label-text text-xl">Description</span>
                             </label>
 
                             <textarea type="text" name="" id="" cols="10" rows="3" className='textarea-bordered'
@@ -77,7 +77,7 @@ const AddProduct = () => {
                         </div>
                         <div className="form-control w-full  mx-auto max-w-xs">
                             <label className="label">
-                                <span className="label-text">Per unit price</span>
+                                <span className="label-text text-xl">Per unit price</span>
                             </label>
 
                             <input type="number"
@@ -88,7 +88,7 @@ const AddProduct = () => {
                         </div>
                         <div className="form-control w-full  mx-auto max-w-xs">
                             <label className="label">
-                                <span className="label-text">Product image URL</span>
+                                <span className="label-text text-xl">Product image URL</span>
                             </label>
 
                             <input type="text"

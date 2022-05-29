@@ -2,7 +2,7 @@ import React from 'react';
 
 const Blog = () => {
     return (
-        <section className='mt-12'>
+        <section className='mt-12 text-xl'>
             <div className=" bg-base-200 text-left p-8 rounded-b-box">
                 <div>
                 <h1 className="text-2xl  font-bold">1. How will you improved the performance of a react application ?</h1>
