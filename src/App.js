@@ -18,6 +18,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import AddProduct from './Pages/Dashboard/AddProduct';
 import AllProduct from './Pages/Home/AllProduct';
+import Payment from './Pages/Dashboard/Payment';
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
           <Route path='addproduct' element={<AddProduct/>}></Route>
           
         </Route>
+        <Route path='payment' element={<Payment/>} ></Route>
         <Route path='allreview' element={<AllReview/>}></Route>
         <Route path='allproduct' element={<AllProduct/>}></Route>
         <Route path='blog' element={<Blog/>}></Route>

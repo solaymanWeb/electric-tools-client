@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 const MyReview = () => {
 
 
-    const { register, handleSubmit } = useForm();
+    const { register, watch, handleSubmit } = useForm();
     const onSubmit = data => {
         const url =`http://localhost:5000/review`
         fetch(url,{
@@ -23,6 +23,8 @@ const MyReview = () => {
         })
 
     };
+    const rating= watch('rating');
+
     return (
         <div>
 
@@ -56,12 +58,12 @@ const MyReview = () => {
                <span className="label-text"> Add a review</span>
            </label>
 
-           <textarea type="text" placeholder='Type a review'   name="" id="" cols="10"  rows="3" className='textarea-bordered p-2'
+           <textarea type="text" placeholder='Type a review'    name="" id="" cols="10"  rows="3" className='textarea-bordered p-2'
            {...register("review")}
            ></textarea>
            </div>
-
-           <button type='submit' className="btn w-full mt-5 max-w-xs"> submit </button>
+            {rating <= 0 || rating>=6 ? <button type='submit' className="btn w-full mt-5 max-w-xs" disabled> submit </button> : <button type='submit' className="btn w-full mt-5 max-w-xs"> submit </button>}
+           
             </form>   
            </div>
             </div>
