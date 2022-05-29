@@ -1,9 +1,9 @@
 import React from 'react';
-import myImage from '../Assest/solayman2021.jpg'
+import myImage from '../Assest/solayman2021.jpg';
 
 const Portfolio = () => {
     return (
-        <div className='mt-8'>
+        <div className='my-8'>
             <div className="hero shadow-xl">
             <div className="hero-content flex-col gap-5 lg:flex-row">
                 <img src={myImage} className="lg:max-w-sm md:max-w-sm rounded-lg shadow-2xl" alt='my_image' />
@@ -27,10 +27,15 @@ const Portfolio = () => {
                 </ol>
                 <h3 className='pt-4 font-bold text-xl'> Live project </h3>
                 <div className='pt-2'>
-                
-                <button className="btn btn-outline btn-primary">Project-1</button>
-                <button className="btn btn-outline btn-primary mx-2">Project-2</button>
-                <button className="btn btn-outline btn-primary">Project-3</button>
+
+
+                <a href="https://fridge-store-house.netlify.app/" target="_blank" rel="noopener noreferrer"> <button className="btn btn-outline btn-primary mx-2">Project-1</button></a>
+
+                <a href="https://good-health-good-life.netlify.app/" target="_blank" rel="noopener noreferrer"> <button className="btn btn-outline btn-primary mx-2">Project-2</button></a>
+
+                <a href="https://fashion-store-9.netlify.app/" target="_blank" rel="noopener noreferrer"> <button className="btn btn-outline btn-primary mx-2">Project-3</button></a>
+               
+               
                 </div>
                 </div>
             </div>

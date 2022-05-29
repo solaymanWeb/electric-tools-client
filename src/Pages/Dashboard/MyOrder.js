@@ -13,6 +13,23 @@ const MyOrder = () => {
             .then(data => setOrders(data))
         }
     },[user])
+
+    const orderCancle=(id)=>{
+        const proced = window.confirm('are you sure cancle order')
+        if(proced){
+            const url = `http://localhost:5000/purchase/${id}`
+            fetch(url,{
+                method: "DELETE",
+            })
+            .then(res => res.json())
+            .then(data => {
+                // console.log(data)
+                const remainder = orders.filter(order=> order._id !== id) 
+                setOrders(remainder);
+            })
+        }
+        console.log(id)
+    }
     return (
         <div>
             <h2 className=" text-center text-2xl pt-3 text-orange-500 font-bold">My Order</h2>
@@ -34,10 +51,10 @@ const MyOrder = () => {
                     orders.map((order, index) =>
                      <tr>
                         <th>{index +1}</th>
-                        <td>{order.productName}</td>
-                        <td>{order.email}</td>
+                        <td>{order?.productName}</td>
+                        <td>{order?.email}</td>
                         <td>Pending...</td>
-                        <td><button className='btn btn-danger'>Cancle Order</button></td>
+                        <td><button onClick={()=>orderCancle(order?._id)} className='btn btn-xs'>Cancle Order</button></td>
                     </tr> )
                 }
                 </tbody>
