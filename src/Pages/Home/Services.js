@@ -33,7 +33,7 @@ const Services = () => {
            services.map(service=>        
               <div className="card  bg-base-100 shadow-xl">
             <figure className='p-10 w-4/5 h-4/5'>
-            <img w-full src={service.picture} alt="Shoes" />
+            <img w-full src={service.picture} alt="pictur" />
             </figure>
            <div className="card-body pt-0 text-left text-sm ">
                <ul>

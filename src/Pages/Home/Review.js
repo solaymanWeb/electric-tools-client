@@ -17,7 +17,7 @@ useEffect(()=>{
                 <div className="card bg-base-100 shadow-xl">
                 <div className="card-body text-start" >
                     <h2 className="card-title">Name: {review.name}</h2>
-                    <p>Start: {review.rating}</p>
+                    <p>Rating: {review.rating}</p>
                     <p>Review: {review.review}</p>
                 </div>
                 </div>

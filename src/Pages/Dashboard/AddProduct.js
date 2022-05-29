@@ -92,7 +92,7 @@ const AddProduct = () => {
                             </label>
 
                             <input type="text"
-                                placeholder="Type image URL" name='quantity'
+                                placeholder="Type image URL" name='picture'
                                 className="input input-bordered w-full h-8"  {...register("picture")}
                             />
                         </div>

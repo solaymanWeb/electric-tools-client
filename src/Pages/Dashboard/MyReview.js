@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 const MyReview = () => {
 
 
-    const { register, watch, handleSubmit } = useForm();
+    const { register, watch, reset, handleSubmit } = useForm();
     const onSubmit = data => {
         const url =`http://localhost:5000/review`
         fetch(url,{
@@ -21,6 +21,7 @@ const MyReview = () => {
                 toast.success("successfully!! review added")
             }
         })
+        reset()
 
     };
     const rating= watch('rating');

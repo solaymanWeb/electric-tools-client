@@ -19,6 +19,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import AddProduct from './Pages/Dashboard/AddProduct';
 import AllProduct from './Pages/Home/AllProduct';
 import Payment from './Pages/Dashboard/Payment';
+import ManageProducts from './Pages/Dashboard/ManageProducts';
 
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
           <Route path='myreview' element={<MyReview/>}></Route>
           <Route path='myprofile' element={<MyProfile/>}></Route>
           <Route path='addproduct' element={<AddProduct/>}></Route>
+          <Route path='manageproducts' element={<ManageProducts/>}></Route>
           
         </Route>
         <Route path='payment' element={<Payment/>} ></Route>

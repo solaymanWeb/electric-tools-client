@@ -16,13 +16,16 @@ const Purchase = () => {
     useEffect(() => {
         fetch(`http://localhost:5000/tools/${id}`)
             .then(res => res.json())
-            .then(data => setTools(data))
+            .then(data => {
+                console.log(data)
+                setTools(data)
+            })
 
     }, [])
 
     // console.log(tools)
     const quantity = watch('quantity')
-    // console.log(quantity)
+    console.log(quantity)
 
     const onSubmit = data => {
         const url = `http://localhost:5000/purchase`
@@ -35,6 +38,7 @@ const Purchase = () => {
         })
             .then(res => res.json())
             .then(data => {
+                
                 if (data) {
                     toast.success('Order succesfully')
                 }
@@ -45,14 +49,6 @@ const Purchase = () => {
     if (loading) {
         return <button className='btn btn-loading'>Loading...</button>
     }
-
-    // let pQuantity;
-    // if( quantity> tools?.stock || quantity< tools?.minimumOrder){
-    //     quantity = <div className='disabled'></div>
-    // }
-    // handle quantity
-
-
 
 
 
@@ -125,6 +121,7 @@ const Purchase = () => {
 
                             <input type="text"
                                 value={tools?.name}
+                                readOnly
                                 placeholder="Your product name" name=''
                                 className="input input-bordered w-full h-8"  {...register("productName")}
                             />
@@ -142,7 +139,7 @@ const Purchase = () => {
                         </div>
 
                         {
-                            quantity > tools?.stock || quantity < tools?.minimumOrder ? <button type='submit' className="btn w-full mt-5 max-w-xs" disabled>  buy now </button> : <button type='submit' className="btn w-full mt-5 max-w-xs"> buy now </button>}
+                            quantity > parseInt(tools?.stock )|| quantity < parseInt(tools?.minimumOrder) ? <button type='submit' className="btn w-full mt-5 max-w-xs" disabled>  buy now </button> : <button type='submit' className="btn w-full mt-5 max-w-xs"> buy now </button>}
 
                     </form>
                 </div>
