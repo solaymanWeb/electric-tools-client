@@ -1,6 +1,6 @@
 # project Name : Electric Tools
 
-This project Live link [click here for live project](https://github.com/facebook/create-react-app).
+This project Live link [click here for live project](https://electric-tools.netlify.app/).
 
 ## project summary: 
 
