@@ -29,7 +29,7 @@ const MyOrder = () => {
                 setOrders(remainder);
             })
         }
-        console.log(id)
+      
     }
     return (
         <div>
@@ -39,7 +39,7 @@ const MyOrder = () => {
                 {/* <!-- head --> */}
                 <thead>
                 <tr>
-                    <th></th>
+                    <th>No</th>
                     <th>Product name</th>
                     <th>Email</th>
                     <th>Status</th>
@@ -51,13 +51,13 @@ const MyOrder = () => {
                
                  {
                     orders.map((order, index) =>
-                     <tr>
+                     <tr className='' key={index}>
                         <th>{index +1}</th>
                         <td>{order?.productName}</td>
                         <td>{order?.email}</td>
                         <td>Pending...</td>
-                        <td><Link to='/payment'><button className='btn btn-xs'>Payment</button></Link></td>
-                        <td><button onClick={()=>orderCancle(order?._id)} className='btn btn-xs'>Cancle Order</button></td>
+                        <td><Link to='/payment'><button className='btn btn-sm'>Payment</button></Link></td>
+                        <td><button onClick={()=>orderCancle(order?._id)} className='btn btn-sm'>Cancle Order</button></td>
                     </tr> )
                 }
                 </tbody>

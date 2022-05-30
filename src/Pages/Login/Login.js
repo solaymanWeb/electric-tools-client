@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init'
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import useCreateEmailPassToken from '../../hooks/useCreateEmailPassToken';
 
 
 
@@ -17,6 +18,8 @@ const Login = () => {
         loading,
         error,
       ] = useSignInWithEmailAndPassword(auth);
+      const [createUser]= useCreateEmailPassToken(gUser)
+      
     let signInError;
 
     const onSubmit = data => {
@@ -29,7 +32,7 @@ const Login = () => {
         return <button className='btn loading'>Loading...</button>
     }
     if(gError || error){
-         signInError = <p className='text-red-500'>{gError.message || error.message}</p>
+         signInError = <p className='text-red-500'>{gError?.message || error?.message}</p>
     }
     let from = location.state?.from?.pathname || "/";
     if(user || gUser){

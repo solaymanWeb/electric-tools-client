@@ -36,7 +36,7 @@ const MyReview = () => {
             <form onSubmit={handleSubmit(onSubmit)}>
             <div className="form-control w-full mx-auto   max-w-xs">
            <label className="label">
-               <span className="label-text text-xl">Full name</span>
+               <span className="label-text text-lg">Full name</span>
            </label>
            <input type="text"
            placeholder="Your full name" 
@@ -46,7 +46,7 @@ const MyReview = () => {
 
             <div className="form-control w-full mx-auto  max-w-xs">
            <label className="label">
-               <span className="label-text text-xl">Rating</span>
+               <span className="label-text text-lg">Rating</span>
            </label>
            <input type="number"
            placeholder="Type your rating 1 to 5" 
@@ -56,7 +56,7 @@ const MyReview = () => {
 
             <div className="form-control w-full mx-auto  max-w-xs">
            <label className="label">
-               <span className="label-text text-xl"> Add a review</span>
+               <span className="label-text text-lg"> Add a review</span>
            </label>
 
            <textarea type="text" placeholder='Type a review'    name="" id="" cols="10"  rows="3" className='textarea-bordered p-2'

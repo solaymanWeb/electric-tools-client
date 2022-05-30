@@ -15,11 +15,11 @@ const Navbar = () => {
         <li ><Link to='/dashboard'>Dashboard</Link></li>
         <li ><Link to='/blog'>Blog</Link></li>
         <li ><Link to='/portfolio'>portfolio</Link></li>
-        <li >{user? <button onClick={logout} className="btn btn-ghost text-xl">Log out</button> :<Link to='/login'>Login</Link>}</li>
+        <li >{user? <button onClick={logout} className="btn btn-ghost text-md pb-1">Log out</button> :<Link to='/login'>Login</Link>}</li>
         <li ><Link to='/signup'>Sign up</Link></li>
     </>
     return (
-<div className="navbar bg-base-100 text-xl">
+<div className="navbar bg-base-100 text-lg">
 <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex="0" className="btn btn-ghost lg:hidden">

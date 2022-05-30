@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import auth from '../../firebase.init'
 import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
+import useCreateEmailPassToken from '../../hooks/useCreateEmailPassToken';
 
 
 const Signup = () => {
@@ -15,6 +16,7 @@ const Signup = () => {
         error,
       ] = useCreateUserWithEmailAndPassword(auth);
       const navigate=useNavigate()
+      const [createUser]=useCreateEmailPassToken(user)
 
 
       if(loading || updating){
@@ -22,8 +24,9 @@ const Signup = () => {
       }
       let createError ;
       if(error || updateError){
-        createError = <p className='text-red-500'>{error.message || updateError.message}</p>
+        createError = <p className='text-red-500'>{error?.message || updateError?.message}</p>
       }
+
 
     const onSubmit =async (data) => {
         

@@ -30,8 +30,9 @@ const Services = () => {
              {/* SERVICES  */}
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 '>  
        {
-           services.map(service=>        
-              <div className="card  bg-base-100 shadow-xl">
+           services.map((service, index )=>    
+              
+              <div className="card  bg-base-100 shadow-xl" key={index}  >
             <figure className='p-10 w-4/5 h-4/5'>
             <img w-full src={service.picture} alt="pictur" />
             </figure>

@@ -13,8 +13,9 @@ useEffect(()=>{
              <h4 className="text-green-500  font-bold text-2xl">Buyer <span className='text-orange-500'>Review</span></h4>
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-5 text-left py-8'>
             {
-                reviews.map(review => <>
-                <div className="card bg-base-100 shadow-xl">
+                reviews.map((review, index) => <>
+                
+                <div key={index} className="card bg-base-100 shadow-xl">
                 <div className="card-body text-start" >
                     <h2 className="card-title">Name: {review.name}</h2>
                     <p>Rating: {review.rating}</p>
@@ -32,3 +33,4 @@ useEffect(()=>{
 };
 
 export default Review;
+
