@@ -31,16 +31,16 @@ const AllProduct = () => {
         <section className='container mx-auto md:mt-8 lg:mt-12 text-xl'>
             {/* DIVIDER */}
             <div className=" border-opacity-50">
-                <div className="divider text-green-500 font-bold text-3xl">Our all product</div>
+                <div className="divider py-16 text-green-500 font-bold text-3xl">Our all product</div>
             </div>
 
             {/* All product  */}
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 text-xl '>
                 {
                     services.map(service =>
-                        <div className="">
+                        <div className=" p-4 services-card">
                             <div className="card bg-base-500 container mx-auto shadow-xl">
-                                <figure className='p-5  h-4/5'>
+                                <figure className='p-5 all-card-img'>
                                     <img w-full src={service.picture} alt="Shoes" />
                                 </figure>
                                 <div className="card-body pt-0 text-left text-xl ">

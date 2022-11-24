@@ -31,7 +31,7 @@ const AddProduct = () => {
 
     return (
         <div className='container mx-auto'>
-            <h2 className=" text-center text-2xl pt-3 text-orange-500 font-bold">Add a  Item</h2>
+            <h2 className=" text-center text-2xl pt-3 text-orange-500 font-bold">Add a Item</h2>
             <div className="  mx-auto w-full bg-gray-100 shadow-xl">
                 <div className="card-body   ">
                     <h2 className=" text-center text-2xl font-bold">Add a New Item</h2>
