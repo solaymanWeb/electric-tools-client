@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import './Allproduct.css'
 
 
 
@@ -21,9 +22,9 @@ const Services = () => {
        
     } 
     return (
-        <section className=' md:mt-8 lg:mt-12 text-2xl'>
+        <section className=' container mx-auto md:mt-8 lg:mt-12 text-2xl'>
             {/* DIVIDER */}
-            <div className="flex flex-col w-full border-opacity-50">
+            <div className="flex py-10 flex-col w-full border-opacity-50">
                  <div className="divider text-green-500 font-bold text-3xl">Inventory</div>
              </div>
 
@@ -33,8 +34,8 @@ const Services = () => {
            services.map((service, index )=>    
               
               <div className="card  bg-base-100 shadow-xl" key={index}  >
-            <figure className='p-10 w-4/5 h-4/5'>
-            <img w-full src={service.picture} alt="pictur" />
+            <figure className='p-5 w-50 card-img text-center h-4/5'>
+            <img w-50 src={service.picture} alt="pictur" />
             </figure>
            <div className="card-body pt-0 text-left text-xl ">
                <ul>

@@ -37,7 +37,7 @@ const Signup = () => {
         
     };
     return (
-        <div className='flex justify-center'>
+        <div className='flex justify-center py-20'>
         <div className="card w-96 bg-base-100 shadow-xl">
        <div className="card-body">
             <h2 className=" text-center text-2xl font-bold">Register</h2>

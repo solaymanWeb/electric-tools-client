@@ -3,7 +3,7 @@ import offer from '../Assest/offer.webp'
 
 const Offer = () => {
     return (
-        <section className='pt-20'>
+        <section className='pt-20 container mx-auto'>
             <h4 className="text-green-500 font-bold text-2xl pb-10">Best Offer <span className='text-orange-500'>For This Month</span></h4>
          <div>
             <img src={offer} alt="" />

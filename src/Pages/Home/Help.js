@@ -2,7 +2,7 @@ import React from 'react';
 
 const Help = () => {
     return (
-<section className='py-16'>
+<section className='py-16 container mx-auto'>
     <h4 className='font-bold text-2xl pb-12'>How can we help you ?</h4>
 <div className='grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-5 '>
      <div className="card bg-gray-50 py-5  text-black">

@@ -2,7 +2,7 @@ import React from 'react';
 
 const BusinessSummary = () => {
     return (
-        <section className='py-24'>
+        <section className='py-24 container mx-auto'>
             <div className=" hero bg-gray-100 py-8">
                 <div className="hero-content text-center">
                     <div className="max-w-md">

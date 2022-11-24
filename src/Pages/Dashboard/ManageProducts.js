@@ -39,7 +39,7 @@ const ManageProducts = () => {
     }
 
     return (
-        <section className='px-5'>
+        <section className='px-5 container mx-auto'>
             {/* DIVIDER */}
             <div className="flex flex-col w-full border-opacity-50">
                 <div className="divider pb-8 text-green-500 font-bold text-3xl">Manage products</div>

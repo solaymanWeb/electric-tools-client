@@ -8,7 +8,7 @@ const [users, setUsers]=useState([])
 
 
 useEffect(()=>{
-    fetch('http://localhost:5000/users')
+    fetch('https://gentle-hamlet-86123.herokuapp.com/users')
     .then(res=> res.json())
     .then(data =>{
         // console.log(data)
@@ -17,7 +17,7 @@ useEffect(()=>{
 },[users])
 
 const makeAdmin=(email)=>{
-    fetch(`http://localhost:5000/user/admin/${email}`,{
+    fetch(`https://gentle-hamlet-86123.herokuapp.com/user/admin/${email}`,{
         method:"PUT",
         headers:{
             'content-type':'application/json'
@@ -34,7 +34,7 @@ const makeAdmin=(email)=>{
 const deleteUser=(id)=>{
     const proced = window.confirm('are you sure user DELETE')
     if(proced){
-        fetch(`http://localhost:5000/users/${id}`,{
+        fetch(`https://gentle-hamlet-86123.herokuapp.com/users/${id}`,{
         method: "DELETE",
     })
     .then(res=>res.json())
@@ -46,7 +46,7 @@ const deleteUser=(id)=>{
 }
 
     return (
-        <div>
+        <div className='container mx-auto'>
             <div className="overflow-x-auto">
   <table className="table w-full">
     {/* <!-- head --> */}
