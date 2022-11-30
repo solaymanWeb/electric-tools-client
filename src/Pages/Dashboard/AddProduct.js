@@ -3,6 +3,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
+import './Dashboard.css'
 
 const AddProduct = () => {
     const { register, reset, handleSubmit } = useForm();
@@ -30,44 +31,44 @@ const AddProduct = () => {
     }
 
     return (
-        <div className='container mx-auto'>
+        <div className='container mx-auto py-4 '>
             <h2 className=" text-center text-2xl pt-3 text-orange-500 font-bold">Add a Item</h2>
-            <div className="  mx-auto w-full bg-gray-100 shadow-xl">
-                <div className="card-body   ">
+            <div className=" add-product mx-auto w-full bg-gray-100 shadow-xl">
+                <div className="card-body card-manage">
                     <h2 className=" text-center text-2xl font-bold">Add a New Item</h2>
 
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="form-control w-full mx-auto   max-w-xs">
                             <label className="label ">
-                                <span className="label-text text-lg">Product Name</span>
+                                <span className="label-text text-lg font-medium">Product Name</span>
                             </label>
                             <input type="text"
                                 placeholder="Type product name"
-                                className="input input-bordered w-full h-8"  {...register("name")}
+                                className="input input-bordered w-full"  {...register("name")}
                             />
                         </div>
                         <div className="form-control w-full mx-auto  max-w-xs">
                             <label className="label">
-                                <span className="label-text text-lg">Available Product Quantity</span>
+                                <span className="label-text text-lg font-medium">Available Product Quantity</span>
                             </label>
                             <input type="number"
                                 placeholder="Type Available Product"
-                                className="input input-bordered w-full h-8"  {...register("stock")}
+                                className="input input-bordered w-full "  {...register("stock")}
                             />
                         </div>
                         <div className="form-control w-full mx-auto  max-w-xs">
                             <label className="label">
-                                <span className="label-text text-lg">Minimum Order Quantity</span>
+                                <span className="label-text text-lg font-medium">Minimum Order Quantity</span>
                             </label>
                             <input type="number"
                                 placeholder="Type minimum order quantity"
-                                className="input input-bordered w-full h-8"  {...register("minimumOrder")}
+                                className="input input-bordered w-full "  {...register("minimumOrder")}
                             />
                         </div>
 
                         <div className="form-control w-full mx-auto  max-w-xs">
                             <label className="label">
-                                <span className="label-text text-lg">Description</span>
+                                <span className="label-text text-lg font-medium">Description</span>
                             </label>
 
                             <textarea type="text" name="" id="" cols="10" rows="3" className='textarea-bordered'
@@ -77,27 +78,27 @@ const AddProduct = () => {
                         </div>
                         <div className="form-control w-full  mx-auto max-w-xs">
                             <label className="label">
-                                <span className="label-text text-lg">Per unit price</span>
+                                <span className="label-text text-lg font-medium">Per unit price</span>
                             </label>
 
                             <input type="number"
                                 placeholder="Type per unit price" name=''
-                                className="input input-bordered w-full h-8"  {...register("price")}
+                                className="input input-bordered w-full "  {...register("price")}
                             />
 
                         </div>
                         <div className="form-control w-full  mx-auto max-w-xs">
                             <label className="label">
-                                <span className="label-text text-lg">Product image URL</span>
+                                <span className="label-text text-lg font-medium">Product image URL</span>
                             </label>
 
                             <input type="text"
                                 placeholder="Type image URL" name='picture'
-                                className="input input-bordered w-full h-8"  {...register("picture")}
+                                className="input input-bordered w-full "  {...register("picture")}
                             />
                         </div>
 
-                        <button type='submit' className="btn w-full mt-5 max-w-xs"> Add Product </button>
+                        <button type='submit' className="btn w-full mt-5 max-w-xs font-medium"> Add Product </button>
 
                     </form>
                 </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
+import './Dashboard.css'
 
 const MyReview = () => {
 
@@ -29,8 +30,8 @@ const MyReview = () => {
     return (
         <div>
 
-            <div className="  mx-auto w-full ">
-            <div className="card-body  ">
+            <div className="  mx-auto  ">
+            <div className="card-body card-manage ">
             <h2 className=" text-center text-2xl text-orange-500 font-bold">Give a review</h2>
 
             <form onSubmit={handleSubmit(onSubmit)}>
@@ -40,7 +41,7 @@ const MyReview = () => {
            </label>
            <input type="text"
            placeholder="Your full name" 
-           className="input input-bordered w-full h-8"  {...register("name")}
+           className="input input-bordered w-full"  {...register("name")}
            />
            </div>
 
@@ -50,7 +51,7 @@ const MyReview = () => {
            </label>
            <input type="number"
            placeholder="Type your rating 1 to 5" 
-           className="input input-bordered w-full h-8"  {...register("rating")}
+           className="input input-bordered w-full"  {...register("rating")}
            />
            </div>
 

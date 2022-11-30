@@ -9,7 +9,7 @@ useEffect(()=>{
     .then(data => setReviews(data))
 },[])
     return (
-        <section className='bg-gray-50 container mx-auto '>
+        <section className='bg-gray-50 container mx-auto'>
              <h4 className="text-green-500  font-bold text-2xl">Buyer <span className='text-orange-500'>Review</span></h4>
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-5 text-left py-8'>
             {

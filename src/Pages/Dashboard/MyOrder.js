@@ -33,7 +33,7 @@ const MyOrder = () => {
     }
     return (
         <div className='container mx-auto'>
-            <h2 className=" text-center text-2xl pt-3 text-orange-500 font-bold">My Order</h2>
+            <h2 className=" text-center text-2xl py-5 text-orange-500 font-bold">My Order</h2>
             <div className="overflow-x-auto">
             <table className="table w-full">
                 {/* <!-- head --> */}
