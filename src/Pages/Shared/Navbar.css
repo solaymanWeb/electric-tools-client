@@ -3,3 +3,6 @@
     width: 100%;
     color: #fff;
 }
+.logo img{
+   max-width: 50%;
+}

@@ -1,9 +1,10 @@
-
-
 .card-img img{
     width: 50%;
 }
-.slider-img img{
+.slider-area {
+    height: 500px;
+}
+.slider-area img {
     width: 100%;
 }
 .all-card-img{
@@ -16,5 +17,7 @@
 }
 .services-card{
      background: #f3f3f3;
-
+}
+.footer-bg{
+     background: -webkit-linear-gradient(315deg,#505050 25%,#293c9f);
 }

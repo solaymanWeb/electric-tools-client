@@ -24,8 +24,8 @@ const Services = () => {
     return (
         <section className=' container mx-auto md:mt-8 lg:mt-12 text-2xl'>
             {/* DIVIDER */}
-            <div className="flex py-10 flex-col w-full border-opacity-50">
-                 <div className="divider text-green-500 font-bold text-3xl">Inventory</div>
+            <div className="py-10 border-opacity-50">
+                 <div className=" text-black-500 font-bold text-3xl">Inventory</div>
              </div>
 
              {/* SERVICES  */}

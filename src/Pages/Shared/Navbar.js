@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import auth from '../../firebase.init'
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { signOut } from 'firebase/auth';
+import logo from '../Assest/logo.png'
 import "./Navbar.css"
 
 const Navbar = () => {
@@ -30,7 +31,11 @@ const Navbar = () => {
             {menuItem}
           </ul>
         </div>
-        <Link to='/' className="btn btn-ghost normal-case   text-green-500 font-bold sm:text-sm lg:text-2xl">Electric <span className='text-orange-500'>Tools</span></Link>
+        <Link to='/'>
+          <div className='logo'>
+          <img src={logo} alt="" />
+          </div>
+        </Link>
 
       </div>
 
