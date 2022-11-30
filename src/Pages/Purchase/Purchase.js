@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
+import './Purchase.css'
 
 
 const Purchase = () => {
@@ -53,9 +54,9 @@ const Purchase = () => {
 
 
     return (
-        <section className='mt-8 grid grid-cols-2  gap-5 '>
+        <section className='mt-8 grid md:grid-cols-2 gap-5 container mx-auto '>
             <div className="  bg-gray-100 shadow-xl">
-                <figure className="px-3 pt-5 w-72 mx-auto">
+                <figure className="px-3 pt-5 w-80 mx-auto">
                     <img src={tools.picture} alt="card" className="rounded-xl" />
                 </figure>
                 <div className="card-body text-left text-xl ">
@@ -71,24 +72,24 @@ const Purchase = () => {
 
             {/* Delivery Information */}
 
-            <div className="  mx-auto w-full text-xl bg-gray-100 shadow-xl">
-                <div className="card-body text-xl ">
-                    <h2 className=" text-center text-2xl font-bold">Purchase information</h2>
+            <div className="mx-auto w-full text-xl bg-gray-100 shadow-xl">
+                <div className="card-body w-100 form-wrap text-xl ">
+                    <h2 className=" text-center py-4 text-2xl font-bold">Purchase Information</h2>
 
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="form-control  w-full mx-auto    max-w-xs">
-                            <label className="label">
-                                <span className="label-text text-xl">Full name</span>
+                            <label className="label text-lg font-medium">
+                                Full name
                             </label>
                             <input type="text"
                                 value={user?.displayName || ''}
                                 placeholder="Your full name"
-                                className="input input-bordered w-full h-8"  {...register("name")}
+                                className="input input-bordered w-full"  {...register("name")}
                             />
                         </div>
                         <div className="form-control w-full mx-auto  max-w-xs">
-                            <label className="label">
-                                <span className="label-text text-xl">Phone number</span>
+                            <label className="label text-lg font-medium">
+                                Phone number
                             </label>
                             <input type="number"
                                 placeholder="Your phone number"
@@ -96,8 +97,8 @@ const Purchase = () => {
                             />
                         </div>
                         <div className="form-control w-full mx-auto  max-w-xs">
-                            <label className="label">
-                                <span className="label-text text-xl">Email</span>
+                            <label className="label text-lg font-medium">
+                                Email
                             </label>
                             <input type="email"
                                 value={user?.email || ''}
@@ -106,8 +107,8 @@ const Purchase = () => {
                             />
                         </div>
                         <div className="form-control w-full mx-auto  max-w-xs">
-                            <label className="label">
-                                <span className="label-text text-xl">Full Address</span>
+                            <label className="label text-lg font-medium">
+                        Full Address
                             </label>
 
                             <textarea type="text" name="" id="" cols="10" rows="3" className='textarea-bordered'
@@ -115,8 +116,8 @@ const Purchase = () => {
                             ></textarea>
                         </div>
                         <div className="form-control w-full  mx-auto max-w-xs">
-                            <label className="label">
-                                <span className="label-text text-xl">Product Name</span>
+                            <label className="label text-lg font-medium">
+                                Product Name
                             </label>
 
                             <input type="text"
@@ -128,8 +129,8 @@ const Purchase = () => {
 
                         </div>
                         <div className="form-control w-full  mx-auto max-w-xs">
-                            <label className="label">
-                                <span className="label-text text-xl">Product Quantity</span>
+                            <label className="label text-lg font-medium">
+                            Product Quantity
                             </label>
 
                             <input type="number"
