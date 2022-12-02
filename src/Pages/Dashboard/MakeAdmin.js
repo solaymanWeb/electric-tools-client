@@ -4,6 +4,7 @@ import { toast } from 'react-toastify';
 
 
 const MakeAdmin = () => {
+  
 const [users, setUsers]=useState([])
 
 
@@ -25,7 +26,7 @@ const makeAdmin=(email)=>{
     })
     .then(res => res.json())
     .then(data =>{
-        // console.log(data)
+        console.log(data)
         toast.success('successfully made an admin')
     })
 
@@ -65,7 +66,7 @@ const deleteUser=(id)=>{
           <th>{index +1}</th>
           <td>{user?.email}</td>
           <td>{
-              user?.role !=="admin" && <button onClick={()=>makeAdmin(user?.email)} className="btn btn-sm">Make admin</button>
+            user?.role !=="admin" && <button onClick={()=>makeAdmin(user?.email)} className="btn btn-sm">Make admin</button>
               }</td>
           <td><button onClick={()=>deleteUser(user?._id)} className="btn btn-sm">Delete user</button></td>
         </tr>)
